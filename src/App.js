@@ -90,7 +90,6 @@ function App() {
         a[index].isChosen=true
       }else{
         if(cardsChosen[0].value===card.value){
-          alert("Good Move!")
           a[index].isChosen=true
           setCardsChosen(null)
         }else{
@@ -100,7 +99,6 @@ function App() {
             }
           }
           setCardsChosen(null)
-          alert("Try Again!")
         }
       }
     }
