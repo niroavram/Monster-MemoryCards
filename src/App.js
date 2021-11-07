@@ -90,9 +90,10 @@ function App() {
         a[index].isChosen=true
       }else{
         if(cardsChosen[0].value===card.value){
-          a[index].isChosen=true
+          
           setCardsChosen(null)
         }else{
+          
           for(let i=0;i<memoryArr.length;i++){
             if(cardsChosen[0].value===a[i].value){
               a[i].isChosen=false
@@ -128,7 +129,7 @@ function App() {
   <>
    {memoryArr.map((card,index)=>{
      return(
-       <Grid className={classes.card} key={index} item xs={6} sm={2} md={2} lg={2} xl={1} >
+       <Grid className={classes.card} key={index} item xs={5} sm={2} md={2} lg={2} xl={1} >
       <Link    onClick={()=>checkMemory(card,index)} >
       {card.isChosen?
       <img className={classes.media} src={card.pic} title=" lol"/>
