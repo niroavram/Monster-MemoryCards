@@ -7,7 +7,7 @@ const mon6 = "https://res.cloudinary.com/niroavram/image/upload/v1636280274/6_yb
 const mon7 = "https://res.cloudinary.com/niroavram/image/upload/v1636280274/7_zqvim6.png";
 const mon8 = "https://res.cloudinary.com/niroavram/image/upload/v1636280274/8_wiv7c0.png";
 const back = "https://res.cloudinary.com/niroavram/image/upload/v1636280274/back_tnczji.png";
-const logo = require("../asset/img/layout/logo.png");
+const logo = "https://res.cloudinary.com/niroavram/image/upload/v1636297818/logo_rfobct.png";
 const monArr= [{
     isChosen: false,
     pic: mon1,
@@ -108,4 +108,5 @@ const monArr= [{
 export default {
 monArr,
   back,
+  logo
 };

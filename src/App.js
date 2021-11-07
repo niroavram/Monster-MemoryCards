@@ -10,10 +10,16 @@ textAlign: 'center',
 justifyContent: 'center',
 backgroundColor: "#a8dadc"
   },
+  header: {
+    display:'flow-root',
+    textAlign: 'center',
+    justifyContent: 'center',
+    backgroundColor: "#e9c46a"
+      },
   media: {
     padding:10,
-    minWidth: 300,
-    height:350,
+    minWidth: 100,
+    height:150,
     borderRadius: "15px",
   },
   card: {
@@ -28,15 +34,15 @@ backgroundColor: "#a8dadc"
   btn: {
     backgroundColor: 'green',
     color: 'white',
-    width: 300,
-    height: 100,
-    fontSize: 38
+    width: 200,
+    height: 70,
+    fontSize: 25
   },
 
 }));
 
 function App() {
-  const {monArr,back} = images
+  const {monArr,back,logo} = images
   const mon1="https://res.cloudinary.com/niroavram/image/upload/v1636280274/8_wiv7c0.png"
   const [cardsChosen,setCardsChosen] = useState(null)
   const [memoryArr,setmemoryArr] = useState(null)
@@ -112,13 +118,19 @@ function App() {
   const classes =  useStyles();
   return (
       <div className={classes.root}>
+        <div  className={classes.header}>
+          <img className={classes.media} src={logo} title=" lol"/>
           <h1>Memory Monster</h1>
+
+        </div>
+        
+
           <Grid className={classes.cards} container spacing={1}>
 {memoryArr!==null? 
   <>
    {memoryArr.map((card,index)=>{
      return(
-       <Grid className={classes.card} key={index} item xs={6} sm={4} md={3} lg={2} xl={1} >
+       <Grid className={classes.card} key={index} item xs={6} sm={2} md={2} lg={2} xl={1} >
       <Link    onClick={()=>checkMemory(card,index)} >
       {card.isChosen?
       <img className={classes.media} src={card.pic} title=" lol"/>
