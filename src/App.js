@@ -90,7 +90,7 @@ function App() {
         a[index].isChosen=true
       }else{
         if(cardsChosen[0].value===card.value){
-          
+          a[index].isChosen=true
           setCardsChosen(null)
         }else{
           
